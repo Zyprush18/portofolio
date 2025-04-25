@@ -1,95 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Muh. Zulhaji</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white">
+  </head>
+  <body class="bg-white">
     <!-- Header -->
-    <header class="fixed inset-x-0 top-0 z-50 backdrop-blur-3xl shadow-sm">
-        <nav class="flex items-center justify-between p-4 lg:px-8" aria-label="Global">
-            <!-- Logo -->
-            <div class="flex lg:flex-1">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Muh.Zulhaji</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="Logo">
-                </a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <div class="flex lg:hidden">
-                <button type="button" aria-label="Open main menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-            </div>
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex lg:gap-x-12">
-                <a href="#" class="text-sm font-semibold text-gray-900">Home</a>
-                <a href="#" class="text-sm font-semibold text-gray-900">About Me</a>
-                <a href="#" class="text-sm font-semibold text-gray-900">Skill</a>
-                <a href="#" class="text-sm font-semibold text-gray-900">Contact Me</a>
-            </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <!-- <a href="#" class="text-sm font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
-            </div>
-        </nav>
-        <!-- Mobile Menu -->
-        <div class="hidden" role="dialog" aria-modal="true">
-            <div class="fixed inset-0 z-50 bg-gray-800 bg-opacity-25"></div>
-            <div class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white p-6 shadow-lg sm:ring-1 sm:ring-gray-900/10">
-                <div class="flex items-center justify-between">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Muh.Zulhaji</span>
-                        <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="Logo">
-                    </a>
-                    <button type="button" aria-label="Close menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                        <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="mt-6 space-y-6">
-                    <a href="#" class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg">Home</a>
-                    <a href="#" class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg">About Me</a>
-                    <a href="#" class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg">Skill</a>
-                    <a href="#" class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg">Contact Me</a>
-                </div>
-            </div>
+    <header class="fixed inset-x-0 top-0 z-50 bg-white shadow-sm">
+      <nav
+        class="flex items-center justify-between p-4 lg:px-8"
+        aria-label="Global"
+      >
+        <!-- Logo -->
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="font-bold text-xl">Muh.Zulhaji</span>
+          </a>
         </div>
+        <!-- Mobile Menu Button -->
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            aria-label="Open main menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            id="menu-button"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold text-gray-900">Home</a>
+          <a href="#" class="text-sm font-semibold text-gray-900">Skill</a>
+          <a href="#" class="text-sm font-semibold text-gray-900">Project</a>
+          <a href="#" class="text-sm font-semibold text-gray-900">Contact Me</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="https://github.com/Zyprush18"
+            target="_blank"
+            class="text-sm font-semibold text-gray-900 flex items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-9 h-9"
+              viewBox="0 0 64 64"
+            >
+              <path
+                d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 40.238706 44.458716 47.16934 36.904297 49.306641 C 36.811496 49.1154 36.747844 48.905917 36.753906 48.667969 C 36.784906 47.458969 36.753906 44.637563 36.753906 43.601562 C 36.753906 41.823563 35.628906 40.5625 35.628906 40.5625 C 35.628906 40.5625 44.453125 40.662094 44.453125 31.246094 C 44.453125 27.613094 42.554688 25.720703 42.554688 25.720703 C 42.554688 25.720703 43.551984 21.842266 42.208984 20.197266 C 40.703984 20.034266 38.008422 21.634812 36.857422 22.382812 C 36.857422 22.382813 35.034 21.634766 32 21.634766 C 28.966 21.634766 27.142578 22.382812 27.142578 22.382812 C 25.991578 21.634813 23.296016 20.035266 21.791016 20.197266 C 20.449016 21.842266 21.445312 25.720703 21.445312 25.720703 C 21.445312 25.720703 19.546875 27.611141 19.546875 31.244141 C 19.546875 40.660141 28.371094 40.5625 28.371094 40.5625 C 28.371094 40.5625 27.366329 41.706312 27.265625 43.345703 C 26.675939 43.553637 25.872132 43.798828 25.105469 43.798828 C 23.255469 43.798828 21.849984 42.001922 21.333984 41.169922 C 20.825984 40.348922 19.7845 39.660156 18.8125 39.660156 C 18.1725 39.660156 17.859375 39.981656 17.859375 40.347656 C 17.859375 40.713656 18.757609 40.968484 19.349609 41.646484 C 20.597609 43.076484 20.574484 46.292969 25.021484 46.292969 C 25.547281 46.292969 26.492043 46.171872 27.246094 46.068359 C 27.241926 47.077908 27.230199 48.046135 27.246094 48.666016 C 27.251958 48.904708 27.187126 49.114952 27.09375 49.306641 C 19.540258 47.168741 14 40.238046 14 32 C 14 22.059 22.059 14 32 14 z"
+              ></path>
+            </svg>
+          </a>
+
+          <a
+            href="https://buymeacoffee.com/muhzulhaji"
+            target="_blank"
+            class="flex items-center bg-yellow-200 p-[5px] rounded-lg"
+          >
+            <img src="bmc-logo.svg" alt="Buy Me a Coffee" class="w-4 h-4" />
+            <span class="ml-1 text-sm">Buy Me a Coffee</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-25"
+      >
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white p-6 shadow-lg sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="font-bold text-xl">Muh.Zulhaji</span>
+            </a>
+
+            <button
+              type="button"
+              aria-label="Close menu"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              id="close-button"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 space-y-6">
+            <a
+              href="#"
+              class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
+              >Skill</a
+            >
+            <a
+              href="#"
+              class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
+              >Project</a
+            >
+            <a
+              href="#"
+              class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
+              >Contact Me</a
+            >
+            <div class="mt-4 flex m-4">
+              <a
+                href="https://github.com/Zyprush18"
+                target="_blank"
+                class="text-sm font-semibold text-gray-900 flex items-center ml-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-9 h-9"
+                  viewBox="0 0 64 64"
+                >
+                  <path
+                    d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 40.238706 44.458716 47.16934 36.904297 49.306641 C 36.811496 49.1154 36.747844 48.905917 36.753906 48.667969 C 36.784906 47.458969 36.753906 44.637563 36.753906 43.601562 C 36.753906 41.823563 35.628906 40.5625 35.628906 40.5625 C 35.628906 40.5625 44.453125 40.662094 44.453125 31.246094 C 44.453125 27.613094 42.554688 25.720703 42.554688 25.720703 C 42.554688 25.720703 43.551984 21.842266 42.208984 20.197266 C 40.703984 20.034266 38.008422 21.634812 36.857422 22.382812 C 36.857422 22.382813 35.034 21.634766 32 21.634766 C 28.966 21.634766 27.142578 22.382812 27.142578 22.382812 C 25.991578 21.634813 23.296016 20.035266 21.791016 20.197266 C 20.449016 21.842266 21.445312 25.720703 21.445312 25.720703 C 21.445312 25.720703 19.546875 27.611141 19.546875 31.244141 C 19.546875 40.660141 28.371094 40.5625 28.371094 40.5625 C 28.371094 40.5625 27.366329 41.706312 27.265625 43.345703 C 26.675939 43.553637 25.872132 43.798828 25.105469 43.798828 C 23.255469 43.798828 21.849984 42.001922 21.333984 41.169922 C 20.825984 40.348922 19.7845 39.660156 18.8125 39.660156 C 18.1725 39.660156 17.859375 39.981656 17.859375 40.347656 C 17.859375 40.713656 18.757609 40.968484 19.349609 41.646484 C 20.597609 43.076484 20.574484 46.292969 25.021484 46.292969 C 25.547281 46.292969 26.492043 46.171872 27.246094 46.068359 C 27.241926 47.077908 27.230199 48.046135 27.246094 48.666016 C 27.251958 48.904708 27.187126 49.114952 27.09375 49.306641 C 19.540258 47.168741 14 40.238046 14 32 C 14 22.059 22.059 14 32 14 z"
+                  ></path>
+                </svg>
+              </a>
+
+              <a
+                href="https://buymeacoffee.com/muhzulhaji"
+                target="_blank"
+                class="flex items-center bg-yellow-200 p-[5px] rounded-lg ml-10"
+              >
+                <img src="bmc-logo.svg" alt="Buy Me a Coffee" class="w-4 h-4" />
+                <span class="ml-1 text-sm">Buy Me a Coffee</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Main Content -->
-    <div class="relative isolate px-6 lg:px-8 pt-24">
-        <div class="mx-auto max-w-2xl py-32 text-center">
-            <h1 class="text-5xl font-semibold text-gray-900 sm:text-7xl">Coming Soon</h1>
-            <!-- <p class="mt-6 text-lg text-gray-600 sm:text-xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
-            <div class="mt-8 flex justify-center gap-x-6">
-                <a href="#" class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500">Get Started</a>
-                <a href="#" class="text-sm font-semibold text-gray-900">Learn More &rarr;</a>
-            </div> -->
+  
+    <div class="relative isolate px-4 lg:px-6 pt-24">
+      <!-- home -->
+      <div id="home">
+        <div
+          class="max-w-2xl sm:mx-[20px] py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-0 lg:mx-[200px]"
+        >
+          <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Hi, I'm Muh.Zulhaji
+          </h1>
+          <p class="mt-2 text-base sm:text-lg text-gray-700">
+            a software developer that focuses on developing backend.
+          </p>
+          <div class="mt-6 flex items-center space-x-2">
+            <a
+              href="#"
+              class="flex items-center text-sm font-semibold bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition"
+            >
+              <!-- SVG Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4 mr-2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                />
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.querySelector('button[aria-label="Open main menu"]');
-            const closeButton = document.querySelector('button[aria-label="Close menu"]');
-            const mobileMenu = document.querySelector('div[role="dialog"]');
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.getElementById("menu-button");
+        const closeButton = document.getElementById("close-button");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.remove('hidden');
-            });
-
-            closeButton.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
         });
+
+        closeButton.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
