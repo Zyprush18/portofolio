@@ -5,10 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Muh. Zulhaji</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes fade-right {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fade-right {
+        animation: fade-right 0.5s ease-out forwards;
+      }
+      @keyframes fade-left {
+        0% {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fade-left {
+        animation: fade-left 0.5s ease-out forwards;
+      }
+
+      @keyframes soft-bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .bounce-soft {
+        animation: soft-bounce 1s ease-in-out infinite;
+      }
+    </style>
   </head>
-  <body class="bg-white">
+  <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed inset-x-0 top-0 z-50 bg-white shadow-sm">
+    <header
+      class="fixed inset-x-0 top-0 z-50 bg-gray-50 shadow-md lg:backdrop-blur-sm"
+    >
       <nav
         class="flex items-center justify-between p-4 lg:px-8"
         aria-label="Global"
@@ -46,10 +96,17 @@
         </div>
         <!-- Desktop Menu -->
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold text-gray-900">Home</a>
-          <a href="#" class="text-sm font-semibold text-gray-900">Skill</a>
-          <a href="#" class="text-sm font-semibold text-gray-900">Project</a>
-          <a href="#" class="text-sm font-semibold text-gray-900">Contact Me</a>
+          <a href="#home" class="text-sm font-semibold text-gray-900">Home</a>
+          <a href="#aboutme" class="text-sm font-semibold text-gray-900"
+            >About Me</a
+          >
+          <a href="#skill" class="text-sm font-semibold text-gray-900">Skill</a>
+          <a href="#project" class="text-sm font-semibold text-gray-900"
+            >Project</a
+          >
+          <a href="#contact" class="text-sm font-semibold text-gray-900"
+            >Contact Me</a
+          >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
@@ -74,7 +131,11 @@
             class="flex items-center bg-yellow-200 p-[5px] rounded-lg"
           >
             <img src="bmc-logo.svg" alt="Buy Me a Coffee" class="w-4 h-4" />
-            <span class="ml-1 text-sm">Buy Me a Coffee</span>
+            <span
+              class="ml-1 text-sm"
+              style="font-family: 'Dancing Script', cursive"
+              >Buy Me a Coffee</span
+            >
           </a>
         </div>
       </nav>
@@ -82,7 +143,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-25"
+        class="hidden fixed inset-0 z-50 bg-opacity-80 backdrop-blur-sm"
       >
         <div
           class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white p-6 shadow-lg sm:ring-1 sm:ring-gray-900/10"
@@ -117,22 +178,27 @@
           </div>
           <div class="mt-6 space-y-6">
             <a
-              href="#"
+              href="#home"
               class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
               >Home</a
             >
             <a
-              href="#"
+              href="#aboutme"
+              class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
+              >About Me</a
+            >
+            <a
+              href="#skill"
               class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
               >Skill</a
             >
             <a
-              href="#"
+              href="#project"
               class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
               >Project</a
             >
             <a
-              href="#"
+              href="#contact"
               class="block text-base font-semibold text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-lg"
               >Contact Me</a
             >
@@ -168,20 +234,24 @@
     </header>
 
     <!-- Main Content -->
-  
+
     <div class="relative isolate px-4 lg:px-6 pt-24">
       <!-- home -->
-      <div id="home">
+      <div
+        id="home"
+        class="flex flex-col lg:flex-row items-center lg:items-start bg-gray-50"
+      >
+        <!-- Text -->
         <div
-          class="max-w-2xl sm:mx-[20px] py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-0 lg:mx-[200px]"
+          class="max-w-2xl text-center lg:text-left py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-0 lg:mx-28 fade-right"
         >
           <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">
             Hi, I'm Muh.Zulhaji
           </h1>
-          <p class="mt-2 text-base sm:text-lg text-gray-700">
+          <p class="mt-4 text-base sm:text-lg text-gray-700">
             a software developer that focuses on developing backend.
           </p>
-          <div class="mt-6 flex items-center space-x-2">
+          <div class="mt-6 flex justify-center lg:justify-start space-x-2">
             <a
               href="#"
               class="flex items-center text-sm font-semibold bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition"
@@ -205,6 +275,20 @@
             </a>
           </div>
         </div>
+
+        <!-- Avatar -->
+        <div class="mt-10 lg:mt-0 flex justify-center fade-left">
+          <img
+            src="bluop_avatar.svg"
+            alt="blob background avatar"
+            class="w-[1000px] sm:w-[400px] lg:w-[500px] bounce-soft"
+          />
+        </div>
+      </div>
+
+      <!-- about me -->
+      <div id="aboutme" class="mt-4">
+        <h1 class="text-3xl text-center font-bold">About Me</h1>
       </div>
     </div>
 
