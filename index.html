@@ -9,7 +9,17 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
     <style>
+      #particles-js {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #f3f3f3; /* warna latar belakang bisa disesuaikan */
+        z-index: -1;
+      }
+
       @keyframes fade-right {
         0% {
           opacity: 0;
@@ -55,9 +65,11 @@
     </style>
   </head>
   <body class="bg-gray-50">
+
+<div id="particles-js" class="fixed inset-0 -z-10"></div>
     <!-- Header -->
     <header
-      class="fixed inset-x-0 top-0 z-50 bg-gray-50 shadow-md lg:backdrop-blur-sm"
+      class="fixed inset-x-0 top-0 z-50 shadow-md lg:backdrop-blur-sm"
     >
       <nav
         class="flex items-center justify-between p-4 lg:px-8"
@@ -260,7 +272,7 @@
       <!-- home -->
       <div
         id="home"
-        class="flex flex-col lg:flex-row items-center lg:items-start bg-gray-50 scroll-mt-24"
+        class="flex flex-col lg:flex-row items-center lg:items-start  scroll-mt-24"
       >
         <!-- Text -->
         <div
@@ -457,6 +469,56 @@
         closeButton.addEventListener("click", () => {
           mobileMenu.classList.add("hidden");
         });
+      });
+
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 25,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#808080",
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.3,
+            random: true,
+          },
+          size: {
+            value: 15,
+            random: true,
+          },
+          line_linked: {
+            enable: false,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "top",
+            random: true,
+            straight: false,
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+            },
+            onclick: {
+              enable: false,
+            },
+            resize: true,
+          },
+        },
+        retina_detect: true,
       });
     </script>
   </body>
