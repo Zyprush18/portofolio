@@ -422,85 +422,136 @@
     </div>
 
     <!-- Project -->
-    <div
-      id="project"
-      class="scroll-mt-24 py-16 fade-right px-4 sm:px-6 lg:px-8"
-    >
-      <div class="max-w-2xl mx-auto text-center py-20 sm:py-24 lg:py-28">
-        <h1 class="text-3xl text-center font-bold">Project</h1>
-        <!-- task tracker cli -->
-
-        <div class="flex flex-wrap justify-center gap-4 mt-5">
-          <div
-            class="max-w-sm bg-gray-100 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700"
-          >
-            <a href="#">
-              <img
-                class="rounded-t-2xl"
-                src="./assets/task-tracker.png"
-                alt="Task Tracker CLI preview"
-              />
+<div id="project" class="scroll-mt-24 py-16 fade-right px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <h1 class="text-3xl font-bold">Project</h1>
+    <span></span>
+    <div class="grid auto-cols-max grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-5 w-fit mx-auto">
+      
+      <!-- Task Tracker -->
+      <div class="bg-gray-100 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img class="rounded-t-2xl" src="./assets/task-tracker.png" alt="Task Tracker CLI preview" />
+        </a>
+        <div class="p-4">
+          <a href="#">
+            <h5 class="mb-3 text-xl font-bold text-gray-900 dark:text-white">Task Tracker</h5>
+          </a>
+          <p class="mb-4 text-sm text-gray-700 dark:text-gray-400">
+            Solution from roadmap.sh. Go-based CLI app to manage tasks (add, update, delete, mark). Uses local JSON storage without external libraries.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <a
+              href="https://github.com/Zyprush18/task-tracker"
+              target="_blank"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-800 transition"
+            >
+              GitHub Repo
+              <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.35c-2.23.49-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.22 2.2.82a7.61 7.61 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
             </a>
-            <div class="p-5">
-              <a href="#">
-                <h5
-                  class="mb-3 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-                >
-                  Task Tracker
-                </h5>
-              </a>
-              <p class="mb-4 text-sm text-gray-700 dark:text-gray-400">
-                Solution from <span class="italic">roadmap.sh</span>. Go-based
-                CLI app to manage tasks (add, update, delete, mark). Uses local
-                JSON storage without external libraries.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-2">
-                <a
-                  href="https://github.com/Zyprush18/task-tracker"
-                  target="_blank"
-                  class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-500 dark:bg-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-600 transition-colors"
-                >
-                  GitHub Repo
-                  <svg
-                    class="w-4 h-4 ms-2"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.35c-2.23.49-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.22 2.2.82a7.61 7.61 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://roadmap.sh/projects/task-tracker"
-                  target="_blank"
-                  class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-colors"
-                >
-                  Source: roadmap.sh
-                  <svg
-                    class="w-4 h-4 ms-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <a
+              href="https://roadmap.sh/projects/task-tracker"
+              target="_blank"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 transition"
+            >
+              Source
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 14 10">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- github user activity -->
+      <div class="bg-gray-100 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img class="rounded-t-2xl" src="./assets/github-activity.png" alt="GitHub Activity preview" />
+        </a>
+        <div class="p-4">
+          <a href="#">
+            <h5 class="mb-3 text-xl font-bold text-gray-900 dark:text-white">GitHub Activity Tracker</h5>
+          </a>
+          <p class="mb-4 text-sm text-gray-700 dark:text-gray-400">
+            A solution to a project idea from roadmap.sh — track daily GitHub contributions, commits, and streaks with a clean, user-friendly interface. Built with Go.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <a
+              href="https://github.com/Zyprush18/github-user-activity"
+              target="_blank"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-800 transition"
+            >
+              GitHub Repo
+              <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.35c-2.23.49-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.22 2.2.82a7.61 7.61 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://roadmap.sh/projects/github-user-activity"
+              target="_blank"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 transition"
+            >
+              Source
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 14 10">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
+
+
+       <!-- expense tracker -->
+      <div class="bg-gray-100 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img class="rounded-t-2xl" src="./assets/expense-tracker.png" alt="GitHub Activity preview" />
+        </a>
+        <div class="p-4">
+          <a href="#">
+            <h5 class="mb-3 text-xl font-bold text-gray-900 dark:text-white">GitHub Activity Tracker</h5>
+          </a>
+          <p class="mb-4 text-sm text-gray-700 dark:text-gray-400">
+            A solution to a project idea from roadmap.sh — track daily GitHub contributions, commits, and streaks with a clean, user-friendly interface. Built with Go.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <a
+              href="https://github.com/Zyprush18/github-user-activity"
+              target="_blank"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-800 transition"
+            >
+              GitHub Repo
+              <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.35c-2.23.49-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.22 2.2.82a7.61 7.61 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://roadmap.sh/projects/github-user-activity"
+              target="_blank"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 transition"
+            >
+              Source
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 14 10">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
+
 
     <!-- JavaScript -->
     <script>
